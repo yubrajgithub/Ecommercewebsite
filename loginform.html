@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    form {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        /* Add this line to handle overflow */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    button[type="button"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
+
+    button[type="button"]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<body>
+    <h2> Please fillup this form </h2>
+    <form method="post" name="myform" onsubmit="return validateform()">
+        <table class="gg" border="3" cellpadding="5" cellspacing="5">
+            <tr>
+                <td><label> <b>Full Name</label></b></td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label><b>Address</label></td>
+                <td colspan="3"><input type="text">
+            </tr>
+
+            <tr>
+                <td><label><b> Email</label></b></td>
+                <td><input type="text"></td>
+
+            </tr>
+            <tr>
+                <td><label><b>Gender</label><b></td>
+                <td><input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female" checked>Female
+                    <input type="radio" name="gender" value="Others">Others
+                </td>
+            </tr>
+            <tr>
+                <td><label><b>Address</label><b></td>
+                <td> <select name="product">
+                        <option>New Baneshwor</option>
+                        <option>Matidevi</option>
+                        <option>Tinkuna</option>
+                        <option>Kotheshwor</option>
+                        <option>Nuwakot</option>
+                        <option>Lalitpur</option>
+                        <option>Boudha</option>
+                        <option>Gokharna</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label><b>Date</label></b> </td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="alert('your form has been submitted')"> submit </button>
+                    <button type="button" onclick="alert('try again')"> reset </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+        function validateform() {
+            var Fullname = document.stud - form.fullname
+            var address = document.stud - form.address
+            var email = document.stud - form.email
+
+
+
+            if (name.value.length < 5) {
+                alert("Name ius requried");
+                fullname.focus();
+                return false;
+            }
+            if (address.value.length < 5) {
+                alert("input vaild address");
+                address.focus();
+                return false;
+            }
+            if (email.indexOf("@") == -1 || email.length < 9) {
+                alert("input vaild email");
+                email.focus();
+                return false;
+
+            }
+            else {
+
+                alert("form registed successfully!")
+                return true;
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>

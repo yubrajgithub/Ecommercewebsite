@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Filter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel = "stylesheet" href = "products.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Rajmandu</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallary.html">Gallary</a>
+            
+        </nav>
+
+        <!-- <div class="box1">
+            <div class="cart-count">0</div>
+            <div class="fas fa-shopping-cart" id="cart-icon"></div>
+          </div> -->
+
+          <a href="cart.html">
+            <div class="box1">
+              <div class="cart-count">0</div>
+              <div class="fas fa-shopping-cart" id="cart-icon"></div>
+            </div>
+          </a>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-bth"></div>
+            <div class="fas fa-search" id="search-bth"></div>
+             <!-- <div class="fas fa-shopping-cart" id="cart-bth"></div> -->
+            <div class="fas fa-user" id="login-bth"></div>
+        </div> 
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- <form action="" class="login-form"> -->
+            <!-- <h3>login now</h3>
+            <input type="email" placeholder="Your email" class="formbox">
+            <input type="password" placeholder="your password" class="formbox">
+            <p>forget your password <a href="#">Click here</a></p>
+            <p>don't have password <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn"> -->
+            <div class="login-form">
+
+                <form id="method" onsubmit="return validation()">
+                    <h1>Login</h1>
+                    <div id="message"></div>
+                    <div class="txt-field">
+                        <input type="text" id="username">
+                        <label>Username</label>
+                    </div>
+                    <div class="txt-field">
+                        <input type="password" id="password">
+                        <label>Password</label>
+                    </div>
+                    <div class="pass">Forget password</div>
+                    <div class="btn1">
+                        <button type="button"><a href="customerdashboard.html"> Submit </a></button>
+                      </div>
+                      <div class="signup">
+                        <p>Not a Member?</p>
+                        <a href="loginform.html">Signup</a></div>
+                    
+            </form>
+    
+            </div>
+            
+
+        <div class="cart">
+            <div class="cart-title">Cart Items</div>
+            <div class="cart-content">
+    
+             <div class="cart-box">
+                <img src="pic/chicken.jpg" class="cart-img">
+                <div class="detail-box">
+                  <div class="cart-food-title">Special Dosai</div>
+                  <div class="price-box">
+                    <div class="cart-price">Rs.72</div>
+                     <div class="cart-amt">Rs.72</div>
+                 </div>
+                  <input type="number" value="1" class="cart-quantity">
+                </div>
+                
+                <div class="cart-remove" >
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+    
+              <div class="cart-box">
+                <img src="pic/potatojpg.jpg" class="cart-img">
+                <div class="detail-box">
+                  <div class="cart-food-title">Special Dosai</div>
+                  <div class="price-box">
+                    <div class="cart-price">Rs.72</div>
+                     <div class="cart-amt">Rs.72</div>
+                 </div>
+                  <input type="number" value="1" class="cart-quantity">
+                </div>
+                <div class="cart-remove" >
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+           
+            </div>
+            
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">Rs.0</div>
+          </div>
+    
+          <!-- <button class="btn-buy">Place Order</button> -->
+          <a href="checkout.html">
+            <button class="btn-buy">Checkout</button>
+          </a>
+          
+
+          <a href="payment.html">
+            <div class="fa-solid fa-xmark" id="cart-close"></div>
+        </a>
+        
+    
+          <!-- <i class=""></i> -->
+    
+          </div>
+    </header>
+
+
+
+
+    <div class = "wrapper">
+        <div class = "category-filter">
+            <div class = "container">
+
+                <div id="search-container">
+                    <input
+                      type="search"
+                      id="search-input"
+                      placeholder="Search product name here.."
+                    />
+                    <button id="search">Search</button>
+                  </div>
+                <div class = "title">
+                    <h1>Products</h1>
+                </div>
+
+                <!-- <div class = "filter-btns">
+                    <button type = "button" class = "filter-btn" id = "all">all</button>
+                    <button type = "button" class = "filter-btn" id = "veg">vegetable</button>
+                    
+                    <button type = "button" class = "filter-btn" id = "meat">Meat</button>
+                    <button type = "button" class = "filter-btn" id = "fruits">Fruits</button>
+                    <button type = "button" class = "filter-btn" id = "juice">Juice</button>
+                </div> -->
+
+                <div class = "filter-items">
+                    <div class = "filter-item all veg">
+                        <div class = "item-img">
+                            <img src = "vegetable/1 (1).jpg" alt = "Item image" class="food-img">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Beam</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-cart">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                            <a href="productlist.html?productID=1" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all meat">
+                        <div class = "item-img">
+                            <img src = "vegetable/2.jpg" alt = "Item image" class="food-img">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Potato</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all fruits">
+                        <div class = "item-img">
+                            <img src = "vegetable/3.jpg" alt = "Item image" class="food-img">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">carrot</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=3" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all veg">
+                        <div class = "item-img">
+                            <img src = "vegetable/4.jpg" alt = "Item image" class="food-img">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Bringle</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=4" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all meat">
+                        <div class = "item-img">
+                            <img src = "vegetable/5.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Onion</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=5" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all fruits">
+                        <div class = "item-img">
+                            <img src = "vegetable/6.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Apple</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=6" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all veg">
+                        <div class = "item-img">
+                            <img src = "vegetable/7.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Cauliflower</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=7" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all meat">
+                        <div class = "item-img">
+                            <img src = "vegetable/8.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Spanich</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=8" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all juice">
+                        <div class = "item-img">
+                            <img src = "vegetable/9.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Fruits</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=9" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all veg">
+                        <div class = "item-img">
+                            <img src = "vegetable/10.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Sponge Guard</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=10" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all juice">
+                        <div class = "item-img">
+                            <img src = "vegetable/11.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Fenugreek Green</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=11" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class = "filter-item all juice">
+                        <div class = "item-img">
+                            <img src = "pic/vegetable.jpg" alt = "Item image" ">
+                            <span class = "discount">20%</span>
+                        </div>
+                        <div class = "item-info">
+                            <p class="food-title">Radish</p>
+                            <div>
+                                <span class = "old-price">$20.50</span>
+                                <span class = "new-price">$16.70</span>
+                            </div>
+                            <!-- <a href = "#" class ="add-btn">Add to Cart</a> -->
+                            <p class="add-cart">add to cart</p>
+                             <a href="productlist.html?productID=12" class="view-details">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer page starts-->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Rajmandu <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sunt!</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+
+            <a href="#" class="links"> <i class="fas fa-phone"></i>+9779813850965</a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i>9779843004520</a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> khadkayubraj506@gmail.com</a>
+            <a href="#" class="links"> <i class="fas fa-map-marked-alt"></i> Boudha, Arubarii</a>
+
+        </div>
+
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#features" class="links"> <i class="fas fa-arrow-right"></i>feature</a>
+            <a href="#products" class="links"> <i class="fas fa-arrow-right"></i>products</a>
+            <a href="#about" class="links"> <i class="fas fa-arrow-right"></i>About</a>
+            <a href="#contact-section" class="links"> <i class="fas fa-arrow-right"></i>Contact</a>
+
+
+        </div>
+
+        <div class="box">
+            <h3>news Letter</h3>
+            <p>Subscribe for latest update</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="Subscribe" class="btn">
+            <img src="pic/payment.jpg" class="payment-img" alt="">
+
+
+
+        </div>
+    </div>
+
+    <div class="credit">Created by <span>Yubraj khadka</span>| All right reserved</div>
+</section>
+
+<!---Footer page end-->
+
+
+    <script src = "product.js"></script>
+    
+    
+</body>
+</html>

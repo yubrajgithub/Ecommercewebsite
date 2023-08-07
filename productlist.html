@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single E-commerce Product Page using HTML, CSS - Codingscape</title>
+    <!---Boxicons CDN Setup for icons-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="list.css">
+</head>
+<body>
+    <div class="container">
+        <div class="single-product">
+            <div class="row">
+                <div class="col-6">
+                    <div class="product-image">
+                        <div class="product-image-main">
+                            <img src="pic/basket.jpg" alt="" id="product-main-image">
+                        </div>
+                        <div class="product-image-slider">
+                            <img src="pic/potatojpg.jpg" alt=""  class="image-list">
+                            <img src="pic/fresh.jpg" alt=""  class="image-list">
+                            <img src="pic/fruit.jpg" alt=""  class="image-list">
+                            <img src="pic/vegetable.jpg" alt=""  class="image-list">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="breadcrumb">
+                        <span><a href="home.html">Home</a></span>
+                        <span><a href="products.html">Product</a></span>
+                        <span class="active">vegetable</span>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-title">
+                            <h2>Vegetables</h2>
+                        </div>
+                        <div class="product-rating">
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span><i class="bx bxs-star"></i></span>
+                            <span class="review">(47 Review)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="offer-price">$99.00</span>
+                            <span class="sale-price">$129.00</span>
+                        </div>
+
+                        <div class="product-details">
+                            <h3>Description</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe, quo similique possimus sed debitis beatae, eaque modi aspernatur sapiente laudantium quas accusantium quisquam qui molestias odit delectus corporis voluptatem? Exercitationem nostrum iusto, quaerat consectetur distinctio vero dolorem ab corporis, quia aliquam dicta deserunt iure id nesciunt quis porro. Expedita fugit accusamus debitis. Esse labore optio unde? Perferendis, sint culpa!</p>
+                        </div>
+                        <span class="divider"></span>
+
+                        <div class="product-btn-group">
+                            <div class="button buy-now"><i class='bx bxs-zap' ></i> Buy Now</div>
+                            <div class="button add-cart"><i class='bx bxs-cart' ></i> Add to Cart</div>
+                            <div class="button heart"><i class='bx bxs-heart' ></i> Add to Wishlist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--script-->
+    <script src="list.js"></script>
+    <script>
+        window.onload = function() {
+        // Get the productID from the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const productID = urlParams.get('productID');
+
+        // Here, you can use the productID to fetch the relevant product details from a database or data source
+        // For demonstration purposes, we will use a sample product object as an example
+
+        // Sample product data
+        const products = [
+            {
+                id: 1,
+                name: 'Vegetables',
+                rating: 5,
+                offerPrice: '$99.00',
+                salePrice: '$129.00',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe...',
+                images: [
+                    'pic/basket.jpg',
+                    'pic/potatojpg.jpg',
+                    'pic/fresh.jpg',
+                    'pic/fruit.jpg',
+                    'pic/vegetable.jpg'
+                ]
+            },
+            {
+                id: 2,
+                name: 'Meat',
+                rating: 4,
+                offerPrice: '$89.00',
+                salePrice: '$119.00',
+                description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus saepe...',
+                images: [
+                    'pic/meat.jpg',
+                    'pic/meat1.jpg',
+                    'pic/meat2.jpg',
+                    'pic/meat3.jpg',
+                    'pic/meat4.jpg'
+                ]
+            }
+            // Add similar product data for other products with different IDs
+        ];
+
+        // Find the product details based on the productID
+        const product = products.find((p) => p.id === parseInt(productID, 10));
+
+        if (product) {
+            // Set the product details on the page
+            document.getElementById('product-name').innerText = product.name;
+            // Set other product details like rating, prices, description, etc.
+            // You can also use the images array to create an image slider, similar to the product page
+        } else {
+            // If the productID is not found, display an error message or redirect the user to an error page
+            console.error('Product not found');
+        }
+    };
+
+    </script>
+</body>
+</html>

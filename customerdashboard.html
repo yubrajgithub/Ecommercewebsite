@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="admin.css">
+
+    <title>Customer Dashboard</title>
+</head>
+
+<body>
+
+
+    <!--  customer SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <i class="fa fa-smile-o" aria-hidden="true"></i>
+            <span class="text">Customer Dashboard</span>
+        </a>
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="#">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span class="text">Welcome Page</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    <span class="text">Ordered Product's List page</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-history" aria-hidden="true"></i>
+                    <span class="text">Purchase History Page</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    <span class="text">Account setting Page</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- CUSTOMER SIDEBAR -->
+
+
+
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <span class="num">2</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="pic/profile.jpg">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Welcome to your Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#"> Customer Dashboard</a>
+                        </li>
+                        <li><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                        <li>
+                            <a class="active" href="#">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Recent Orders</h3>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>customer</th>
+                                <th>Product Order Quantity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+
+                                    <p>Dipesh Tamanag</p>
+                                </td>
+                                <td>4</td>
+                                <td><span class="status completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <p>Dipesh Tamanag</p>
+                                </td>
+                                <td>7</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+
+                                    <p>Dipesh Tamanag</p>
+                                </td>
+                                <td>3</td>
+                                <td><span class="status process">Process</span></td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-25">
+                    <div class="container">
+                        <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span>
+                        </h4>
+                        <p><a href="#">Item 1</a> <span class="price">$105</span></p>
+                        <p><a href="#">Item 2</a> <span class="price">$95</span></p>
+                        <p><a href="#">Item 3</a> <span class="price">$100</span></p>
+                        <p><a href="#">Item 4</a> <span class="price">$50</span></p>
+                        <hr>
+                        <p>Total <span class="price" style="color:black"><b>$350</b></span></p>
+                    </div>
+                </div>
+
+                <div class="todo">
+                    <div class="head">
+                        <h3>All History</h3>
+                        <i class='fa fa-plus'></i>
+                        <i class='fa fa-filter'></i>
+                    </div>
+                    <ul class="todo-list">
+                        <li class="completed">
+                            <p>Buy groceries</p>
+                            <i class='fa fa-ellipsis-v'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Contact us</p>
+                            <i class='fa fa-ellipsis-v'></i>
+                        </li>
+                        <li class="not-completed">
+                            <p>Finish report</p>
+                            <i class='fa fa-ellipsis-v'></i>
+                        </li>
+                        <li class="completed">
+                            <p>Pay bills</p>
+                            <i class='fa fa-ellipsis-v'></i>
+                        </li>
+                        <li class="not-completed">
+                            <p>Exercise</p>
+                            <i class='fa fa-ellipsis-v'></i>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

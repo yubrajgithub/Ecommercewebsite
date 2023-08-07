@@ -1,0 +1,193 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact us</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="contact.css">
+
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Rajmandu</a>
+
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+      <a href="gallary.html">Gallary</a>
+  
+    </nav>
+
+    
+    <a href="cart.html">
+      <div class="box1">
+        <div class="cart-count">0</div>
+        <div class="fas fa-shopping-cart" id="cart-icon"></div>
+      </div>
+    </a>
+
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-bth"></div>
+      <div class="fas fa-search" id="search-bth"></div>
+      <!-- <div class="fas fa-shopping-cart" id="cart-bth"></div> -->
+      <div class="fas fa-user" id="login-bth"></div>
+    </div>
+
+    <form action="" class="search-form">
+      <input type="search" id="search-box" placeholder="search here...">
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+
+    <!-- <form action="" class="login-form"> -->
+    <!-- <h3>login now</h3>
+            <input type="email" placeholder="Your email" class="formbox">
+            <input type="password" placeholder="your password" class="formbox">
+            <p>forget your password <a href="#">Click here</a></p>
+            <p>don't have password <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn"> -->
+    <div class="login-form">
+
+      <form id="method" onsubmit="return validation()">
+        <h1>Login</h1>
+        <div id="message"></div>
+        <div class="txt-field">
+          <input type="text" id="username">
+          <label>Username</label>
+        </div>
+        <div class="txt-field">
+          <input type="password" id="password">
+          <label>Password</label>
+        </div>
+        <div class="pass">Forget password</div>
+        <div class="btn1">
+          <button type="button"><a href="customerdashboard.html"> Submit </a></button>
+        </div>
+        <div class="signup">
+          <p>Not a Member?</p>
+          <a href="form.html">Signup</a>
+        </div>
+
+      </form>
+
+    </div>
+
+
+    <div class="cart">
+      <div class="cart-title">Cart Items</div>
+      <div class="cart-content">
+
+      </div>
+
+      <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">Rs.0</div>
+      </div>
+
+      <!-- <button class="btn-buy">Place Order</button> -->
+      <a href="checkout.html">
+          <button class="btn-buy">Checkout</button>
+      </a>
+
+      <a href="contact.html">
+          <div class="fa-solid fa-xmark" id="cart-close"></div>
+      </a>
+      
+      <!-- <i class=""></i> -->
+
+  </div>
+  </header>
+
+
+  <div class="contact-section">
+    <div class="contact-info">
+
+      <div><i class="fa fa-map-marker"></i>Aarubarii,Kathmandu,Nepal</div>
+      <div><a href="mailto:khadkayubraj@gmail.com"><i class="fa fa-envelope-o"></i>khadkayubraj@gmail.com</a></div>
+      <div><i class="fa fa-phone"></i>9843004520</div>
+      <div><i class="fa fa-clock-o"></i>sun-fri 800am-4pm</div>
+
+    </div>
+    <div class="contact-form">
+      <h2>Contact us</h2>
+      <form class="contact" action="" method="post">
+        <input type="text" name="name" class="text-box" placeholder="your Name" required>
+        <input type="email" name="email" class="text-box" placeholder="your Email" required>
+        <textarea name="message" row="4" placeholder="Your Message" required> </textarea>
+        <button type="submit" class="send-btn"
+          onclick="alert('Thank you for your form submittion.We will send you email soon!!')">Submit
+        </button>
+      </form>
+    </div>
+
+    <!-- Google Map iframe -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.477364013454!2d85.37410237429005!3d27.733418624343223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b952118f3dd%3A0x8deb9c5ec4d4c829!2sNava%20Arunima%20Secondary%20School!5e0!3m2!1sen!2snp!4v1690802026308!5m2!1sen!2snp"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <!--Footer page starts-->
+
+  <footer class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Rajmandu <i class="fas fa-shopping-basket"></i></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sunt!</p>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Contact info</h3>
+
+        <a href="#" class="links"> <i class="fas fa-phone"></i>+9779813850965</a>
+        <a href="#" class="links"> <i class="fas fa-phone"></i>9779843004520</a>
+        <a href="#" class="links"> <i class="fas fa-envelope"></i> khadkayubraj506@gmail.com</a>
+        <a href="#" class="links"> <i class="fas fa-map-marked-alt"></i> Boudha, Arubarii</a>
+
+      </div>
+
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="#home" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+        <a href="#features" class="links"> <i class="fas fa-arrow-right"></i>feature</a>
+        <a href="#products" class="links"> <i class="fas fa-arrow-right"></i>products</a>
+        <a href="#about" class="links"> <i class="fas fa-arrow-right"></i>About</a>
+        <a href="#contact-section" class="links"> <i class="fas fa-arrow-right"></i>Contact</a>
+
+
+      </div>
+
+      <div class="box">
+        <h3>news Letter</h3>
+        <p>Subscribe for latest update</p>
+        <input type="email" placeholder="your email" class="email">
+        <input type="submit" value="Subscribe" class="btn">
+        <img src="pic/payment.jpg" class="payment-img" alt="">
+
+
+
+      </div>
+    </div>
+
+    <div class="credit">Created by <span>Yubraj khadka</span>| All right reserved</div>
+  </footer>
+
+  <!---Footer page end-->
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

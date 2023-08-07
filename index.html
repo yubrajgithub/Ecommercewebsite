@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,100&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Rajmandu</a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallary.html">Gallary</a>
+           
+        </nav>
+
+          <a href="cart.html">
+            <div class="box1">
+              <div class="cart-count">0</div>
+              <div class="fas fa-shopping-cart" id="cart-icon"></div>
+            </div>
+          </a>
+          
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-bth"></div>
+            <div class="fas fa-search" id="search-bth"></div>
+             <!-- <div class="fas fa-shopping-cart" id="cart-bth"></div> -->
+            <div class="fas fa-user" id="login-bth"></div>
+        </div> 
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- <form action="" class="login-form"> -->
+            <!-- <h3>login now</h3>
+            <input type="email" placeholder="Your email" class="formbox">
+            <input type="password" placeholder="your password" class="formbox">
+            <p>forget your password <a href="#">Click here</a></p>
+            <p>don't have password <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn"> -->
+            <div class="login-form">
+
+                <form id="method" onsubmit="return validation()">
+                    <h1>Login</h1>
+                    <div id="message"></div>
+                    <div class="txt-field">
+                        <input type="text" id="username">
+                        <label>Username</label>
+                    </div>
+                    <div class="txt-field">
+                        <input type="password" id="password">
+                        <label>Password</label>
+                    </div>
+                    <div class="pass">Forget password</div>
+                    <!-- <div class="btn1" >
+                        <input type="submit" value="submit">
+        
+                    </div> -->
+
+                    <div class="btn1">
+                        <button type="button"><a href="customerdashboard.html"> Submit </a></button>
+                      </div>
+                      
+                      <div class="signup">
+                        <p>Not a Member?</p>
+                        <a href="loginform.html">Signup</a></div>
+                    
+            </form>
+    
+            </div>
+            
+
+        <div class="cart">
+            <div class="cart-title">Cart Items</div>
+            <div class="cart-content">
+           
+            </div>
+            
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">Rs.0</div>
+          </div>
+    
+          <!-- <button class="btn-buy">Place Order</button> -->
+          <a href="checkout.html">
+            <button class="btn-buy"> Proceed to checkout </button>
+          </a>
+
+          <a href="home.html">
+            <div class="fa-solid fa-xmark" id="cart-close"></div>
+        </a>
+        
+    
+          <!-- <i class=""></i> -->
+    
+          </div>
+    </header>
+ <!----Home Section starts-->
+
+ <section class="home" id="home">
+    <div class="content">
+        <h3>All <span>Products</span> are Available</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tenetur, temporibus nam est illo
+            recusandae impedit blanditiis quaerat officia numquam.</p>
+        <a href="#" class="btn">Shop Now</a>
+    </div>
+</section>
+
+ <!----Home Section ends-->
+
+<!--Banner section start-->
+<section class="banner-container">
+    <div class="banner">
+        <img src="pic/front-view-fresh-fruit-cocktails-with-fresh-fruit-slices-ice-cooling-blue-drink-juice-cocktail-fruit-color.jpg" alt="">
+        <div class="content">
+            <h3>Special Offer</h3>
+            <p>Upto 50% off</p>
+            <a href="#" class="btn">check out</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="pic/basket.jpg" alt="">
+        <div class="content">
+            <h3>Special Offer</h3>
+            <p>Upto 50% off</p>
+            <a href="#" class="btn">check out</a>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="pic/limited.jpg" alt="">
+        <div class="content">
+            <h3>Special Offer</h3>
+            <p>Upto 50% off</p>
+            <a href="#" class="btn">check out</a>
+        </div>
+    </div>
+</section>
+
+<!--Banner section ends-->
+
+<!----Feature Section Start-->
+<section class="features" id="features">
+    <h1 class="heading"> Our <span>Features</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="pic/fresh.jpg" alt="">
+            <h3 >fresh and Organic</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veniam.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="pic/freedelivery.jpg" alt="">
+            <h3>freedelivery</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veniam.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+            <img src="pic/pay.jpg" alt="">
+            <h3>Easy Payment</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veniam.</p>
+            <a href="#" class="btn">read more</a>
+        </div>
+    </div>
+
+</section>
+
+<!---Categories section start-->
+<section class="category" id="category">
+    <h1 class="heading">Shop by <span>Category</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <h3>Juice</h3>
+            <p>upto 10% off</p>
+            <img src="pic/juice1.jpg" alt="" srcset="">
+            <a href="#" class="btn">Shop now</a>
+        </div>
+
+        <div class="box">
+            <h3>Meat</h3>
+            <p>upto 30% off</p>
+            <img src="pic/meat.jpg" alt="" srcset="">
+            <a href="#" class="btn">Shop now</a>
+        </div>
+
+        <div class="box">
+            <h3>fruits</h3>
+            <p>upto 10% off</p>
+            <img src="pic//fruit.jpg" alt="" srcset="">
+            <a href="#" class="btn">Shop now</a>
+        </div>
+
+        <div class="box">
+            <h3>Vegetable</h3>
+            <p>upto 10% off</p>
+            <img src="pic/vegetable.jpg" alt="" srcset="">
+            <a href="#" class="btn">Shop now</a>
+        </div>
+    </div>
+</section>
+
+<!---Categories section ends-->
+
+<!----Feature Section end-->
+
+
+<!----about us section start-->
+<section class="about" id="about">
+    <h3 class="sub-heading">About us</h3>
+    <h1 class="heading"> <span>why choose us?</span></h1>
+    <div class="row">
+        <div class="image">
+            <img src="pic/myself.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Best food in our area</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid architecto minus laudantium
+                repellat cumque voluptas nulla consequuntur quibusdam, soluta harum, tenetur aspernatur quam.
+                Architecto autem fugit minus voluptas non perferendis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, id odit? In facere unde est, blanditiis
+                autem soluta et molestiae illo nihil animi voluptates, odit, quas minima possimus. Sed asperiores
+                soluta reprehenderit, vitae eligendi qui exercitationem cupiditate iste quas officia!</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>free delivery</span>
+                </div>
+
+                <div class="icons">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>easy payment</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 services</span>
+                </div>
+            </div>
+            <a href="#" class="btn">learn more</a>
+
+        </div>
+    </div>
+</section>
+
+<!--about us section end-->
+
+
+<!--Footer page starts-->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Rajmandu <i class="fas fa-shopping-basket"></i></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sunt!</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact info</h3>
+
+            <a href="#" class="links"> <i class="fas fa-phone"></i>+9779813850965</a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i>9779843004520</a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> khadkayubraj506@gmail.com</a>
+            <a href="#" class="links"> <i class="fas fa-map-marked-alt"></i> Boudha, Arubarii</a>
+
+        </div>
+
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+            <a href="#features" class="links"> <i class="fas fa-arrow-right"></i>feature</a>
+            <a href="#products" class="links"> <i class="fas fa-arrow-right"></i>products</a>
+            <a href="#about" class="links"> <i class="fas fa-arrow-right"></i>About</a>
+            <a href="#contact-section" class="links"> <i class="fas fa-arrow-right"></i>Contact</a>
+
+
+        </div>
+
+        <div class="box">
+            <h3>news Letter</h3>
+            <p>Subscribe for latest update</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="Subscribe" class="btn">
+            <img src="pic/payment.jpg" class="payment-img" alt="">
+
+
+
+        </div>
+    </div>
+
+    <div class="credit">Created by <span>Yubraj khadka</span>| All right reserved</div>
+</section>
+
+<!---Footer page end-->
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

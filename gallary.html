@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header section</title>
+    <link rel="stylesheet" href="gallary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,100&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Rajmandu</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="gallary.html">Gallary</a>
+           
+        </nav>
+
+
+        <a href="cart.html">
+            <div class="box1">
+                <div class="cart-count">0</div>
+                <div class="fas fa-shopping-cart" id="cart-icon"></div>
+            </div>
+        </a>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-bth"></div>
+            <div class="fas fa-search" id="search-bth"></div>
+            <!-- <div class="fas fa-shopping-cart" id="cart-bth"></div> -->
+            <div class="fas fa-user" id="login-bth"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- <form action="" class="login-form"> -->
+        <!-- <h3>login now</h3>
+            <input type="email" placeholder="Your email" class="formbox">
+            <input type="password" placeholder="your password" class="formbox">
+            <p>forget your password <a href="#">Click here</a></p>
+            <p>don't have password <a href="#">create now</a></p>
+            <input type="submit" value="login now" class="btn"> -->
+        <div class="login-form">
+
+            <form id="method" onsubmit="return validation()">
+                <h1>Login</h1>
+                <div id="message"></div>
+                <div class="txt-field">
+                    <input type="text" id="username">
+                    <label>Username</label>
+                </div>
+                <div class="txt-field">
+                    <input type="password" id="password">
+                    <label>Password</label>
+                </div>
+                <div class="pass">Forget password</div>
+                
+                <div class="btn1">
+                    <button type="button"><a href="customerdashboard.html"> Submit </a></button>
+                  </div>
+                <div class="signup">
+                    <p>Not a Member?</p>
+                    <a href="loginform.html">Signup</a>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div class="cart">
+            <div class="cart-title">Cart Items</div>
+            <div class="cart-content">
+
+            </div>
+
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Rs.0</div>
+            </div>
+
+            <!-- <button class="btn-buy">Place Order</button> -->
+            <a href="checkout.html">
+                <button class="btn-buy">Checkout</button>
+            </a>
+
+            <a href="gallary.html">
+                <div class="fa-solid fa-xmark" id="cart-close"></div>
+            </a>
+            
+            <!-- <i class=""></i> -->
+
+        </div>
+    </header>
+
+    <!--Gallary Option start-->
+
+    <div class="container">
+        <h1>Our Photo Gallary</h1>
+        <div class="gallery-options">
+            <button class="active" onclick="filterGallery('all')">All Photos</button>
+            <button onclick="filterGallery('vegetable')">Vegetable Photos</button>
+            <button onclick="filterGallery('fruit')">Fruit Photos</button>
+            <button onclick="filterGallery('juice')">Juice Photos</button>
+        </div>
+
+        <div class="photo-gallary">
+            <div class="photo vegetable">
+                <img src="vegetable/1 (1).jpg" alt="vegetable Photo">
+            </div>
+            <div class="photo fruit">
+                <img src="pic/fresh.jpg" alt="fruit Photo">
+            </div>
+            <div class="photo juice">
+                <img src="pic/juice.jpg" alt="juice Photo">
+            </div>
+
+            <div class="photo juice">
+                <img src="pic/juice1.jpg" alt="juice Photo">
+            </div>
+            <div class="photo juice">
+                <img src="pic/front-view-fresh-fruit-cocktails-with-fresh-fruit-slices-ice-cooling-blue-drink-juice-cocktail-fruit-color.jpg"
+                    alt="juice Photo">
+            </div>
+            <div class="photo fruit">
+                <img src="pic/fruit.jpg" alt="fruit Photo">
+            </div>
+            <div class="photo vegetable">
+                <img src="pic/tomatojpg.jpg" alt="vegetable Photo">
+            </div>
+            <div class="photo vegetable">
+                <img src="pic/potatojpg.jpg" alt="vegetable Photo">
+            </div>
+            <div class="photo vegetable">
+                <img src="vegetable/3.jpg" alt="vegetable Photo">
+            </div>
+            <div class="photo vegetable">
+                <img src="vegetable/4.jpg" alt="vegetable Photo">
+            </div>
+            <div class="photo vegetable">
+                <img src="vegetable/5.jpg" alt="vegetable Photo">
+            </div>
+
+            <div class="photo fruit">
+                <img src="pic/watermelon.jpg" alt="fruit Photo">
+            </div>
+
+
+        </div>
+
+    </div>
+
+    </div>
+    <!--Gallary Option end-->
+
+    <!--Footer page starts-->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Rajmandu <i class="fas fa-shopping-basket"></i></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, sunt!</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Contact info</h3>
+
+                <a href="#" class="links"> <i class="fas fa-phone"></i>+9779813850965</a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i>9779843004520</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> khadkayubraj506@gmail.com</a>
+                <a href="#" class="links"> <i class="fas fa-map-marked-alt"></i> Boudha, Arubarii</a>
+
+            </div>
+
+            <div class="box">
+                <h3>Quick links</h3>
+                <a href="#home" class="links"> <i class="fas fa-arrow-right"></i>Home</a>
+                <a href="#features" class="links"> <i class="fas fa-arrow-right"></i>feature</a>
+                <a href="#products" class="links"> <i class="fas fa-arrow-right"></i>products</a>
+                <a href="#about" class="links"> <i class="fas fa-arrow-right"></i>About</a>
+                <a href="#contact-section" class="links"> <i class="fas fa-arrow-right"></i>Contact</a>
+
+
+            </div>
+
+            <div class="box">
+                <h3>news Letter</h3>
+                <p>Subscribe for latest update</p>
+                <input type="email" placeholder="your email" class="email">
+                <input type="submit" value="Subscribe" class="btn">
+                <img src="pic/payment.jpg" class="payment-img" alt="">
+
+
+
+            </div>
+        </div>
+
+        <div class="credit">Created by <span>Yubraj khadka</span>| All right reserved</div>
+    </section>
+
+    <!---Footer page end-->
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

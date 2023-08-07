@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Term | condition</title>
+  <link rel="stylesheet" href="term.css">
+</head>
+
+<body>
+  <div class="terms-box">
+    <div class="terms-text">
+      <h2>Term of services</h2>
+      <p>Last Edited:04/09/2023</p>
+      <p>Greetings users,</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, soluta ipsum! Facere corrupti quas assumenda
+        deserunt, officia eaque mollitia quaerat debitis labore inventore quod cumque odio architecto rem possimus!
+        Minima ex dicta accusamus reprehenderit maiores aliquid accusantium quidem inventore nemo? Sunt commodi magni
+        repellat eveniet dolor voluptas distinctio aut facere!</p>
+    </div>
+
+    <!-- <h4>I Agree to the <span>Term of Services</span> and I read the privacy Notice.</h4> -->
+
+    <div class="checkbox">
+
+      <input type="checkbox" id="checkbox" onchange="toggleButtons()">
+      <label for="checkbox">I Agree to the <span>Term of Services</span> and I read the privacy Notice.</label>
+
+    </div>
+
+
+
+
+    <!-- <div class="buttons">
+      <button class="btn red-btn">Accept</button>
+      <button type="button" class="btn gray-btn">Decline</button>
+    </div> -->
+
+    <div class="buttons">
+      <button class="btn red-btn" onclick="acceptAction()" disabled id="acceptBtn">Accept</button>
+      <button type="button" class="btn gray-btn" onclick="declineAction()" disabled id="declineBtn">Decline</button>
+    </div>
+    
+  </div>
+
+  <script>
+ 
+
+    function toggleButtons() {
+    var checkbox = document.getElementById("checkbox");
+    var acceptBtn = document.getElementById("acceptBtn");
+    var declineBtn = document.getElementById("declineBtn");
+
+    if (checkbox.checked) {
+      acceptBtn.disabled = false;
+      declineBtn.disabled = false;
+    } else {
+      acceptBtn.disabled = true;
+      declineBtn.disabled = true;
+    }
+  }
+
+  function acceptAction() {
+    // Navigate to the next page after the user accepts.
+    window.location.href = "payment.html";
+  }
+
+  function declineAction() {
+    // Navigate to the next page after the user declines.
+    window.location.href = "payment.html";
+  }
+  
+  </script>
+</body>
+
+</html>
